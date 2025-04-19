@@ -1,16 +1,81 @@
-# Deepfake_research
-A deep learning-based approach for detecting deepfakes using CNNs and transfer learning. The model identifies facial forgeries by capturing artifacts introduced during synthesis. Accepted for oral presentation at ICICV-2025 (Paper ID: 101).
+🧠 DeepFake Detection
+📌 Overview
+This repository contains the implementation of a Deepfake Detection framework using multiple machine learning and deep learning models including CNNs, ResNet, Vision Transformers (ViT), and Logistic Regression. The goal is to accurately classify manipulated facial images and videos using both spatial and global feature extraction techniques.
+
+🔍 Problem Statement
+Deepfakes pose a growing threat to digital security, misinformation, and personal privacy. This project focuses on building a robust and scalable detection system to identify manipulated media and support digital forensics.
+
+🏗️ Model Architectures
+We explored and compared the performance of the following models:
+
+CNN: Captures local spatial patterns from images.
+
+ResNet: Utilizes residual learning to train deep architectures effectively.
+
+Vision Transformer (ViT): Leverages self-attention to extract global features.
+
+Logistic Regression: Baseline model for binary classification.
+
+📂 Datasets Used
+The models were trained and tested on publicly available benchmark datasets:
+
+FaceForensics++
+
+Celeb-DF
+
+Deepfake Detection Challenge (DFDC) (optional inclusion)
+
+⚙️ Methodology
+🔄 Data Preprocessing
+Frame extraction from videos
+
+Face detection and alignment
+
+Data augmentation (rotation, flipping, color jittering)
+
+Normalization and dataset splitting
+
+🧪 Model Training
+Custom CNN with Conv2D layers and dropout
+
+Transfer learning with ResNet & ViT
+
+Logistic regression using pre-extracted CNN features
+
+Hyperparameter tuning (batch size, learning rate, dropout)
+
+📊 Evaluation Metrics
+Accuracy
+
+Precision, Recall & F1-Score
+
+AUC-ROC Curve
+
+Confusion Matrix
+
+🚀 Results
+
+Model	Accuracy (%)
+CNN	86.19
+ResNet	92.68
+Vision Transformer	98.11
+Logistic Regression	51.05
+
+🛠️ Technologies Used
+Python
+
+TensorFlow / Keras
+
+PyTorch
+
+OpenCV
+
+Scikit-learn
+
+Matplotlib & Seaborn
+
+📜 Research Paper
+The detailed research paper is available in this repository under Research_paper.pdf.
+✅ Accepted for Oral Presentation at ICICV-2025 (Paper ID: 101)
 
 
-🧠 DeepFake Detection: Harnessing Neural Networks for Digital Image Integrity
-This research investigates advanced methods for detecting deepfake content by leveraging deep neural networks. With the growing sophistication of synthetic media generation, ensuring the authenticity of digital images has become a critical challenge. Our approach combines convolutional neural networks (CNNs) with transfer learning to extract robust features from facial images and detect subtle artifacts introduced by generative models.
-
-Key Contributions:
-
-Developed a CNN-based pipeline optimized for deepfake image classification.
-
-Employed transfer learning using pre-trained models (e.g., VGG-16, ResNet-50) for improved accuracy and training efficiency.
-
-Evaluated performance using benchmark datasets such as FaceForensics++, Celeb-DF, and DeepFakeDetection.
-
-Achieved competitive accuracy and generalization across unseen fake generation techniques.
