@@ -1,81 +1,84 @@
-🧠 DeepFake Detection
-📌 Overview
-This repository contains the implementation of a Deepfake Detection framework using multiple machine learning and deep learning models including CNNs, ResNet, Vision Transformers (ViT), and Logistic Regression. The goal is to accurately classify manipulated facial images and videos using both spatial and global feature extraction techniques.
+# 🧠 DeepFake Detection
 
-🔍 Problem Statement
-Deepfakes pose a growing threat to digital security, misinformation, and personal privacy. This project focuses on building a robust and scalable detection system to identify manipulated media and support digital forensics.
+📌 **Overview**  
+This repository contains the implementation of a Deepfake Detection model leveraging Convolutional Neural Networks (CNNs), Vision Transformers (ViT), ResNet, and Logistic Regression. The goal is to detect manipulated facial images and videos using deep learning and traditional machine learning techniques.
 
-🏗️ Model Architectures
-We explored and compared the performance of the following models:
+---
 
-CNN: Captures local spatial patterns from images.
+## 🔍 Problem Statement  
+Deepfakes pose a significant threat to digital security, misinformation, and privacy. This project aims to develop a robust model that can efficiently differentiate between real and fake images/videos.
 
-ResNet: Utilizes residual learning to train deep architectures effectively.
+---
 
-Vision Transformer (ViT): Leverages self-attention to extract global features.
+## 🏗️ Model Architectures
 
-Logistic Regression: Baseline model for binary classification.
+- **CNN:** Captures spatial features and local patterns.
+- **ResNet:** Handles deeper networks using residual connections to prevent vanishing gradients.
+- **Vision Transformer (ViT):** Extracts global dependencies using self-attention mechanisms for effective feature representation.
+- **Logistic Regression:** Acts as a simple baseline model for classification.
 
-📂 Datasets Used
-The models were trained and tested on publicly available benchmark datasets:
+---
 
-FaceForensics++
+## 📂 Dataset
 
-Celeb-DF
+We have used publicly available deepfake datasets such as:
+- **FaceForensics++**
+- **Celeb-DF**
 
-Deepfake Detection Challenge (DFDC) (optional inclusion)
+---
 
-⚙️ Methodology
-🔄 Data Preprocessing
-Frame extraction from videos
+## ⚙️ Methodology
 
-Face detection and alignment
+### 🔄 Data Preprocessing
+- Face detection and alignment  
+- Data augmentation (rotation, flipping, color jittering)  
+- Frame extraction from videos  
+- Dataset splitting (train/val/test)  
 
-Data augmentation (rotation, flipping, color jittering)
+### 🧪 Model Training
+- Implemented CNN, ResNet, ViT, and Logistic Regression architectures  
+- Used Transfer Learning for performance enhancement  
+- Fine-tuned hyperparameters (learning rate, batch size, dropout)  
 
-Normalization and dataset splitting
+### 📊 Evaluation Metrics
+- Accuracy  
+- Precision, Recall, F1-Score  
+- AUC-ROC Curve  
 
-🧪 Model Training
-Custom CNN with Conv2D layers and dropout
+---
 
-Transfer learning with ResNet & ViT
+## 🛠️ Technologies Used
 
-Logistic regression using pre-extracted CNN features
+- Python  
+- TensorFlow / Keras  
+- PyTorch  
+- OpenCV  
+- Scikit-learn  
+- Matplotlib & Seaborn  
 
-Hyperparameter tuning (batch size, learning rate, dropout)
+---
 
-📊 Evaluation Metrics
-Accuracy
+## 🚀 Results
 
-Precision, Recall & F1-Score
+| Model               | Accuracy (%) |
+|--------------------|--------------|
+| CNN                | 86.19        |
+| ResNet             | 92.68        |
+| Vision Transformer | 98.11        |
+| Logistic Regression| 51.05        |
 
-AUC-ROC Curve
+---
 
-Confusion Matrix
+## 📜 Research Paper
 
-🚀 Results
+The research paper detailing this work is available in the repository under **`Research_paper.pdf`**.  
+✅ *Accepted for Oral Presentation at ICICV-2025* (Paper ID: 101)
 
-Model	Accuracy (%)
-CNN	86.19
-ResNet	92.68
-Vision Transformer	98.11
-Logistic Regression	51.05
+---
 
-🛠️ Technologies Used
-Python
+## 📦 Installation
 
-TensorFlow / Keras
-
-PyTorch
-
-OpenCV
-
-Scikit-learn
-
-Matplotlib & Seaborn
-
-📜 Research Paper
-The detailed research paper is available in this repository under Research_paper.pdf.
-✅ Accepted for Oral Presentation at ICICV-2025 (Paper ID: 101)
-
-
+```bash
+git clone https://github.com/yourusername/deepfake-detection.git
+cd deepfake-detection
+pip install -r requirements.txt
